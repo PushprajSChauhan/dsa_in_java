@@ -14,7 +14,7 @@ public class NearbyCars {
 
         @Override
         public int compareTo(Point p){
-            return this.distSq-distSq;
+            return this.distSq-p.distSq;
         }
     }
     public static void main(String[] args) {
