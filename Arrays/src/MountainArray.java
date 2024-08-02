@@ -1,12 +1,10 @@
-package ArrayQuesLeetCode;
-
 public class MountainArray {
 //    in other words it is just to find the maximum number in array if it is unique
     public static void main(String[] args) {
 
     }
 
-    public int peakIndexInMountainArray(int[] arr) {
+    public static int peakIndexInMountainArray(int[] arr) {
         int start=0;
         int end=arr.length-1;
         while(start<end){

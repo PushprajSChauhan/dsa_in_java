@@ -1,5 +1,3 @@
-package ArrayQuesLeetCode;
-
 public class ElementIndexinInfiniteArray {
 //    infinite array mtlb array ki length ka use nhi krna h problem ko solve krne mei
     public static void main(String[] args) {

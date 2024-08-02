@@ -1,5 +1,3 @@
-package ArrayQuesLeetCode;
-
 import java.util.Arrays;
 
 public class FirstandLastIndex {

@@ -1,5 +1,3 @@
-package ArrayQuesLeetCode;
-
 public class SearchinMountain {
     public static void main(String[] args) {
 

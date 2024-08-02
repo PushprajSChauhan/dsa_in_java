@@ -1,5 +1,3 @@
-package ArrayQuesLeetCode;
-
 public class EvenDigitsinNumber {
     public static void main(String[] args) {
         int [] arr={12,345,2,6,7896};
