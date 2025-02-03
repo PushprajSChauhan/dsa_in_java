@@ -56,6 +56,5 @@ public class UniquePrefix {
         for (String word : arr) {
             System.out.println("Unique Prefix of '" + word + "' is: " + findUniquePrefix(word));
         }
-
     }
 }
