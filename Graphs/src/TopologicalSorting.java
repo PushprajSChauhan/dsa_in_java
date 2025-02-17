@@ -53,10 +53,50 @@ public class TopologicalSorting {
         s.push(curr);
     }
 
+    public static void topoSortBFS(ArrayList<Edge> [] graph){
+//        calculate the in-degree of the graph
+        int[] in_degree =new int[graph.length];
+        calcInDegree(graph,in_degree);
+        Queue<Integer> q=new LinkedList<>();
+
+        for(int i=0;i<in_degree.length;i++){
+            if(in_degree[i]==0){
+                q.add(i);
+            }
+        }
+
+//        bfs part
+        while (q.isEmpty()==false){
+            int curr=q.remove();
+            System.out.print(curr+" ");
+//            reduce the in-degree of neighbor nodes by 1
+            for(int i=0;i<graph[curr].size();i++){
+                Edge e=graph[curr].get(i);
+                in_degree[e.dest]--;
+                if(in_degree[e.dest]==0){
+                    q.add(e.dest);
+                }
+            }
+        }
+
+        System.out.println();
+    }
+
+    public static void calcInDegree(ArrayList<Edge>[] graph, int[] in_degree){
+        for(int i=0;i<graph.length;i++){
+            int vertex=i;
+            for(int j=0;j<graph[vertex].size();j++){
+                Edge e=graph[vertex].get(j);
+                in_degree[e.dest]++;
+            }
+        }
+    }
+
     public static void main(String[] args) {
         int vertices=6;
         ArrayList<Edge> [] graph=new ArrayList[vertices];
         createGraph(graph);
-        topoSort(graph);
+        topoSort(graph); //using DFS
+        topoSortBFS(graph); //using BFS
     }
 }
